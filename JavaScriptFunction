@@ -1,1 +1,18 @@
+// function saySomething(firstName = "Dilam na",lastName= "Kiribi"){
+//     console.log(`Hello  ${firstName}  ${lastName}`);
+    
+// }
+
+// let firstName = "Shafiullah";
+// let lastName;
+// saySomething(firstName,lastName);
+
+
+function addNum(a=0, b=0) {
+    console.log(`${a} + ${b} = ${a+b}`);
+}
+
+addNum(4,5);
+addNum(3.6, 2.3); 
+
 
