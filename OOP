@@ -1,0 +1,125 @@
+//Class (ES6)
+//Class is a template for creating objects
+
+// let person1 = {
+//        firstName : "Shafiullah",
+//        lastName : "Raihan",
+//        dob : "11-23-1998",
+//        fullName : function(){
+//               console.log(`${this.firstName} ${this.lastName}`);
+//        }
+// }
+
+// let person2 = {
+//        firstName : "Asif",
+//        lastName : "Iqbal",
+//        dob : "07-15-1998",
+//        fullName : function(){
+//               console.log(`${this.firstName} ${this.lastName}`);
+//        }
+// }
+
+// console.log(person1);   //Everytime same code likhte hocche
+//                             // tai ekoirokom hoile template diye banabo mane class
+// console.log(person2);
+
+
+//template ba class object
+
+// class Person {
+//        constructor(fname,lname,birthday){
+//               this.firstName =fname;
+//               this.lastName = lname;
+//               this.dob = birthday;
+//        }
+//        calculateAge(){
+//               let birthday = new Date(this.dob);
+//               let diff = Date.now() - birthday.getTime();
+//               let ageDate = new Date(diff);
+//               return Math.abs(ageDate.getUTCFullYear() - 1970);
+//        }
+//        fullName(){
+//               console.log(this.firstName,this.lastName);
+//        }
+// }
+
+// let person1 = new Person("Shafiullah", "Raihan", "11-23-1998");
+// let person2 = new Person("Asif", "Iqbal" , "07-13-1998");
+
+// //let person3 = new Person();
+
+// console.log(person1.calculateAge());
+// console.log(person2.calculateAge());
+// //console.log(person3);
+
+// console.log(person2.fullName());
+
+
+
+//SubClass & Inheritence
+
+// class Person {   //base class
+//        constructor(fname,lname,birthday){
+//               this.firstName =fname;
+//               this.lastName = lname;
+              
+//        }
+//        greeting (){
+//               return `Hello ${this.firstName} ${this.lastName}`;
+//        }
+// }
+
+// // class Customer{
+// //        constructor() {
+// //               this.firstName= fname; //same jinish ageo person e chilo 
+// //               this.lastName =lname;// tai inheritance use korbo
+// //               this.phone = phone ;
+// //               this.memberShip = memberShip;
+// //        }
+// // }
+
+
+// class Customer extends Person{   //subclass 
+//        constructor(fname,lname,phone,memberShip) {
+//               super(fname,lname);
+//               this.phone = phone;
+//               this.memberShip = memberShip;
+//        }
+//        fullName(){
+//               console.log(this.firstName,this.lastName);
+//        }
+// }
+
+// let person1 = new Person("Shafiullah","Raihan");
+// console.log(person1);
+// console.log(person1.greeting());
+
+// let customer1 = new Customer("Forman" , "Manik", "01815147576","1222");
+// console.log(customer1);
+// console.log(customer1.greeting());
+// console.log(customer1.fullName());
+
+
+
+
+
+//Static Function
+
+class Person {  //base class
+       constructor(fname,lname,birthday){
+              this.firstName =fname;
+              this.lastName = lname;
+              
+       }
+       greeting (){
+             console.log(`Hello ${this.firstName} ${this.lastName}`);
+             }
+       
+       static test() {
+              console.log("I am static Function");
+       }
+}
+
+let person1 = new Person("Shafiullah" , "Raihan");
+console.log(person1.greeting());
+console.log(Person.test());  // static function ke class theke call korte hoi
