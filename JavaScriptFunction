@@ -8,11 +8,209 @@
 // saySomething(firstName,lastName);
 
 
-function addNum(a=0, b=0) {
-    console.log(`${a} + ${b} = ${a+b}`);
-}
+// function addNum(a=0, b=0) {
+//     console.log(`${a} + ${b} = ${a+b}`);
+// }
 
-addNum(4,5);
-addNum(3.6, 2.3); 
+// addNum(4,5);
+// addNum(3.6, 2.3); 
 
 
+//     console.log(`Hello ${name}`);
+// }
+// let name = "Raihan";
+// saySomething1(name);
+
+
+
+
+
+//Arrow function =>
+
+// let fname = "Shafiullah" , lname = "Raihan";
+
+// let saySomething2 =(fname) =>{
+//     console.log(`Hello koi re ${fname} ES6`);
+
+// }
+// saySomething2(fname);
+
+
+
+
+
+// var foods = ["Cake", "Ice Cream", "Chocolates","Bread"];
+// var numbers = [1,32,31,2];
+// foods.forEach(function(item,i,arr){
+//        console.log(`Index : ${i} and Item ${item}`);
+//        //console.log(arr);
+// }
+// );
+
+// let val = function(item,i,arr){
+//        console.log(`Index : ${i} and Item ${item}`);
+//        //console.log(arr);
+// }
+// foods.forEach(val);
+
+
+
+
+
+
+
+//array iteration using mapping
+
+// function addSomething(item){
+//        return `${item} is a Food`;
+// }
+// let arr_res = foods.map(addSomething);
+// console.log(arr_res);
+
+// let arr_square = numbers.map(function(item){
+//        return item*item;
+// })
+
+// console.log(arr_square);
+
+
+
+
+
+
+//Object Method
+
+// let person = {
+//        firstName : "Asif",
+//        lastName : "Iqbal",
+//        dob : "9-10-1993",
+//        fullName : function(){
+//               return `${this.firstName} ${this.lastName}`;
+//        }
+// }
+
+// console.log(person.firstName);
+// console.log(person.fullName());
+// //console.log(person.fullName);    //full function declaration
+
+// let str = "raihan";
+// console.log(str.length);
+
+// JavaScript shob gulakei object hishebe treat kore 😁
+
+
+
+
+
+
+//built in object =>Math , Datetime
+
+
+// Math module 
+
+
+// let val;
+// val = Math.PI;
+// val = Math.E;
+// val = Math.round(3.1);
+// val = Math.ceil(1.9);
+// val = Math.floor(1.9);
+// val = Math.sqrt(81);
+// val = Math.abs(-8);
+// valo = Math.pow(2,3);
+// val = Math.min(1,-3,-5,3,5);
+// val = Math.max(1,5,3,-5);
+// val = Math.random();
+// val = Math.random()*100;
+// val = Math.floor(Math.random()*100+1);
+
+
+// console.log(val);
+
+
+
+//Date object
+
+
+// let today = new Date();
+// let val = today;
+// let birthday = new Date ('11-23-1997 12:05:24');
+// birthday = new Date ('November 23 1997');
+// birthday = new Date('11/23/1997');
+
+// val = today.toString();
+// val = birthday;
+// val = today.getMonth();
+// val = today.getDate();
+// val = today.getDay();
+// val = today.getFullYear();
+// val = today.getHours();
+// val = today.getMinutes();
+// val = today.getSeconds();
+
+// //Amount of MiliSecond pass since Jan 1st 1970
+// val = today.getTime();  
+// birthday.setMonth(2);
+// birthday.setDate(25);
+// birthday.setFullYear(1998);
+// birthday.setHours(5);
+// console.log(birthday);
+
+
+
+
+
+// console.log(val);
+
+
+
+
+
+
+//var ,let ,const
+//let and const (ES6);
+
+// var a = 10;
+// a = a+7;
+// var a;  //var diye declare korle next time abar declare kora jai
+// let b = 6;
+// b = b*22;
+// let b;   let diye korle re- declare kora jai na 😒
+// const c = 7;  // ar declare ba change kora jabe na
+
+// var a = 1;
+// let b = 2;
+// const c = 3;
+// var d = 10;
+// console.log(`Global Scope: `,a, b, c);
+
+// function test(){
+//        var a= 4;
+//        let b = 5;
+//        const c = 6;
+//        var e = 22; //Local variable .Function er baire access  hobe na
+//        console.log(`Function scope: ` ,a ,b ,c,d,e);
+// }
+
+
+// test();
+
+
+// if(true){
+//        var a = 7;
+//        let b= 8;
+//        const c = 9;
+//        console.log(`If scope : ` ,a,b,c);
+// }
+
+
+
+// console.log(`Global Scope: `,a, b, c);  // 7 2 3  a = 7 hoi geche
+// // if er bhitor var use korle global eo change hoi jabe var change hobe
+
+// for(var a =0;a<10;a++)
+// {
+//        console.log(`Loop : `,a); 😎
+// }
+// console.log(a);  // a change hoi geche .Jodi chai change hobe na taile let use korbo
+// console.log(`Global Scope: `,a, b, c);
